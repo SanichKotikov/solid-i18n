@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "solid",
+    "@babel/typescript",
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "targets": {
+          "chrome": "70"
+        }
+      }
+    ]
+  ]
+}

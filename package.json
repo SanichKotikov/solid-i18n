@@ -1,0 +1,50 @@
+{
+  "name": "solid-i18n",
+  "version": "0.0.1",
+  "description": "Internationalization for SolidJS",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "sideEffects": false,
+  "scripts": {
+    "start": "tsc && babel src --out-dir lib --extensions '.ts,.tsx' --watch",
+    "build": "tsc && babel src --out-dir lib --extensions '.ts,.tsx'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanichKotikov/solid-i18n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SanichKotikov/solid-i18n/issues"
+  },
+  "homepage": "https://github.com/SanichKotikov/solid-i18n",
+  "author": "Sanich Kotikov <sancho@cdrpro.ru> (https://sanichkotikov.github.io)",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "intl",
+    "i18n",
+    "internationalization",
+    "locale",
+    "localization",
+    "globalization",
+    "solid",
+    "solidjs",
+    "format",
+    "formatting",
+    "translate",
+    "translation"
+  ],
+  "peerDependencies": {
+    "solid-js": ">= 1.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.15.7",
+    "@babel/core": "7.15.8",
+    "@babel/preset-env": "7.15.8",
+    "@babel/preset-typescript": "7.15.0",
+    "babel-preset-solid": "1.1.5",
+    "typescript": "4.4.4"
+  }
+}
