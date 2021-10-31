@@ -1,7 +1,7 @@
 import { splitProps, mergeProps } from 'solid-js';
+import { isEmpty } from 'i18n-mini/lib/utils';
+import type { NumberOptions, NumberStyle } from 'i18n-mini/lib/types';
 import { useI18n } from '../context';
-import { isEmpty } from '../utils';
-import type { NumberOptions, NumberStyle } from '../types';
 
 export interface NumericProps extends Omit<NumberOptions, 'style'> {
   value: number;
@@ -13,7 +13,7 @@ export function Numeric(props: Readonly<NumericProps>) {
   const { i18n } = useI18n();
 
   const [local, other] = splitProps(props, ['value', 'preset', 'numberStyle']);
-  const options = mergeProps(other, { style: local.numberStyle })
+  const options = mergeProps(other, { style: local.numberStyle });
 
   return (
     <>

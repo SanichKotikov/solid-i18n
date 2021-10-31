@@ -1,6 +1,6 @@
 {
   "name": "solid-i18n",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Internationalization for SolidJS",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -23,28 +23,30 @@
     "lib"
   ],
   "keywords": [
+    "solid",
+    "solidjs",
     "intl",
     "i18n",
     "internationalization",
     "locale",
     "localization",
-    "globalization",
-    "solid",
-    "solidjs",
     "format",
     "formatting",
     "translate",
     "translation"
   ],
   "peerDependencies": {
-    "solid-js": ">= 1.1.0"
+    "solid-js": ">= 1.2.0"
+  },
+  "dependencies": {
+    "i18n-mini": "0.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.15.7",
-    "@babel/core": "7.15.8",
-    "@babel/preset-env": "7.15.8",
-    "@babel/preset-typescript": "7.15.0",
-    "babel-preset-solid": "1.1.5",
+    "@babel/cli": "7.16.0",
+    "@babel/core": "7.16.0",
+    "@babel/preset-env": "7.16.0",
+    "@babel/preset-typescript": "7.16.0",
+    "babel-preset-solid": "1.2.0",
     "typescript": "4.4.4"
   }
 }

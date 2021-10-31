@@ -1,6 +1,6 @@
 import { JSXElement, onMount } from 'solid-js';
 import { createStore } from 'solid-js/store';
-import type { I18n, SubscribeFunc } from '../types';
+import type { I18n, SubscribeFunc } from 'i18n-mini/lib/types';
 import { I18nContext } from '../context';
 
 interface Props {
