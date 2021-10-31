@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'solid-js';
 import type { Store } from 'solid-js/store';
-import type { I18n } from 'i18n-mini';
+import type { I18n } from './types';
 
 export const I18nContext = createContext<Store<I18n>>();
 

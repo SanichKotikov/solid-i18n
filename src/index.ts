@@ -1,20 +1,22 @@
 import { createStore } from 'solid-js/store';
 import { template, insert } from 'solid-js/web';
 import { createI18n as create } from 'i18n-mini';
-import type { I18n, I18nOptions } from 'i18n-mini';
+import type { I18nOptions } from 'i18n-mini';
+import type { I18n } from './types';
 
 export { defineMessages } from 'i18n-mini';
-export type { I18nPresets, I18n } from 'i18n-mini';
+export type { I18nPresets } from 'i18n-mini';
 
-export { useI18n } from './context';
 export { I18nProvider } from './components/I18nProvider';
 export { Text } from './components/Text';
 export { Numeric } from './components/Numeric';
 export { DateTime } from './components/DateTime';
+export { useI18n } from './context';
 
 export type { TextProps } from './components/Text';
 export type { NumericProps } from './components/Numeric';
 export type { DateTimeProps } from './components/DateTime';
+export type { I18n } from './types';
 
 function formatTag(tag: string, child: string | (readonly string[]) | undefined) {
   const el = template(`<${tag}>`, 0);

@@ -1,6 +1,6 @@
 import type { JSXElement } from 'solid-js';
 import type { Store } from 'solid-js/store';
-import type { I18n } from 'i18n-mini/lib/types';
+import type { I18n } from '../types';
 import { I18nContext } from '../context';
 
 interface Props {

@@ -1,6 +1,6 @@
 {
   "name": "solid-i18n",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Internationalization for SolidJS",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -39,7 +39,7 @@
     "solid-js": ">= 1.2.0"
   },
   "dependencies": {
-    "i18n-mini": "0.0.1"
+    "i18n-mini": "0.0.2"
   },
   "devDependencies": {
     "@babel/cli": "7.16.0",
