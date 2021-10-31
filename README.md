@@ -2,11 +2,21 @@
 
 Tiny internationalization library for SolidJS.
 
-```bash
-npm i -S -E solid-i18n
-```
+There is no goal to cover every possible cases. The library supports only basic functionality:
+
+- String formatting with variables and markup
+- Number formatting, including strings with plurals
+- Date formatting
+- Customization of number and date formatting presets (including defaults)
 
 ## Usage
+
+This library uses Intl APIs (`NumberFormat`, `DateTimeFormat` and `PluralRules`), so you have to
+use [polyfills](https://formatjs.io/docs/polyfills) for some outdated browsers.
+
+```bash
+npm i solid-i18n
+```
 
 #### Displaying Messages
 
@@ -17,7 +27,7 @@ const i18n = createI18n({ language: 'en' });
 
 function App() {
   return (
-    <I18nProvider {...i18n}>
+    <I18nProvider i18n={i18n}>
       <Text
         message="Read the <link>documentation</link> for more info."
         link={(text) => <a href="https://github.com/SanichKotikov/solid-i18n">{text}</a>}
@@ -71,7 +81,7 @@ Note: use `{datetime, date}` for number or string values.
 import { useI18n } from 'solid-i18n';
 
 function SomeComp() {
-  const { i18n } = useI18n();
+  const i18n = useI18n();
 
   return (
     <div>
@@ -93,7 +103,7 @@ const messages = defineMessages({
 });
 
 function SomeComp() {
-  const { i18n } = useI18n();
+  const i18n = useI18n();
   return <h1>{i18n.t(messages.title)}</h1>;
 }
 ```
@@ -120,7 +130,7 @@ const i18n = createI18n({
 
 function App() {
   return (
-    <I18nProvider {...i18n}>
+    <I18nProvider i18n={i18n}>
       <Text
         message="Some value: {count, number, fraction}"
         count={999}

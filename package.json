@@ -1,6 +1,6 @@
 {
   "name": "solid-i18n",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Internationalization for SolidJS",
   "main": "lib/index.js",
   "module": "lib/index.js",

@@ -10,7 +10,7 @@ export interface NumericProps extends Omit<NumberOptions, 'style'> {
 }
 
 export function Numeric(props: Readonly<NumericProps>) {
-  const { i18n } = useI18n();
+  const i18n = useI18n();
 
   const [local, other] = splitProps(props, ['value', 'preset', 'numberStyle']);
   const options = mergeProps(other, { style: local.numberStyle });

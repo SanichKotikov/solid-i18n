@@ -9,7 +9,7 @@ export interface DateTimeProps extends DateTimeOptions {
 }
 
 export function DateTime(props: Readonly<DateTimeProps>) {
-  const { i18n } = useI18n();
+  const i18n = useI18n();
   const [local, others] = splitProps(props, ['date', 'preset']);
 
   return (
