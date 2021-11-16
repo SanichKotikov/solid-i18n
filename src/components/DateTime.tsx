@@ -6,17 +6,18 @@ import { useI18n } from '../context';
 export interface DateTimeProps extends DateTimeOptions {
   date: number | string | Date;
   preset?: string;
+  class?: string;
 }
 
 export function DateTime(props: Readonly<DateTimeProps>) {
   const i18n = useI18n();
-  const [local, others] = splitProps(props, ['date', 'preset']);
+  const [local, others] = splitProps(props, ['date', 'preset', 'class']);
 
   return (
-    <>
+    <span class={local.class}>
       {i18n.formatDateTime(local.date, !isEmpty(others)
         ? others
         : i18n.presets.dateTime?.[local.preset || 'default'])}
-    </>
+    </span>
   );
 }

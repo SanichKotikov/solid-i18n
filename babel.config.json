@@ -7,7 +7,9 @@
       {
         "modules": false,
         "targets": {
-          "chrome": "70"
+          "chrome": "58",
+          "safari": "13",
+          "firefox": "52"
         }
       }
     ]
