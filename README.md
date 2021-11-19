@@ -144,3 +144,7 @@ function App() {
 <div>{i18n.formatNumber(9999, 'fraction')}</div>
 <DateTime date={new Date()} preset="simple" />
 ```
+
+## Extracting messages
+
+Use [react-i18n-mini-parser](https://www.npmjs.com/package/react-i18n-mini-parser) for extracting default messages.
