@@ -1,6 +1,6 @@
 {
   "name": "solid-i18n",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Internationalization for SolidJS",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -39,14 +39,14 @@
     "solid-js": "1.2.x"
   },
   "dependencies": {
-    "i18n-mini": "0.0.2"
+    "i18n-mini": "1.1.x"
   },
   "devDependencies": {
     "@babel/cli": "7.16.0",
     "@babel/core": "7.16.0",
-    "@babel/preset-env": "7.16.0",
+    "@babel/preset-env": "7.16.4",
     "@babel/preset-typescript": "7.16.0",
     "babel-preset-solid": "1.2.x",
-    "typescript": "4.4.4"
+    "typescript": "4.5.2"
   }
 }
