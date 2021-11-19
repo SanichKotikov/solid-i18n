@@ -85,7 +85,7 @@ function SomeComp() {
 
   return (
     <div>
-      <h1>{i18n.t({ message: "Page title" })}</h1>
+      <h1>{i18n.t('Page title')}</h1>
       <div>{i18n.formatNumber(99999.9, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
       <div>{i18n.formatDateTime(new Date(), { day: '2-digit', month: 'short' })}</div>
     </div>
@@ -99,7 +99,7 @@ function SomeComp() {
 import { useI18n, defineMessages } from 'solid-i18n';
 
 const messages = defineMessages({
-  title: { message: "Page title" },
+  title: { message: 'Page title' },
 });
 
 function SomeComp() {
