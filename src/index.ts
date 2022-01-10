@@ -24,20 +24,24 @@ function formatTag(tag: string, child: string | string[] | undefined) {
   return el;
 }
 
-function closeI18n(i18n: Readonly<I18n>): Readonly<I18n> {
+function cloneFunc(func: Function) {
+  return func.bind({});
+}
+
+function cloneI18n(i18n: Readonly<I18n>): Readonly<I18n> {
   return {
     ...i18n,
-    t: i18n.t.bind({}),
-    formatNumber: i18n.formatNumber.bind({}),
-    formatDateTime: i18n.formatDateTime.bind({}),
+    t: cloneFunc(i18n.t),
+    formatNumber: cloneFunc(i18n.formatNumber),
+    formatDateTime: cloneFunc(i18n.formatDateTime),
   };
 }
 
 export function createI18n(options: Omit<I18nOptions, 'formatTag'>) {
   const { i18n, subscribe } = create({ ...options, formatTag });
 
-  const [store, setStore] = createStore(closeI18n(i18n));
-  subscribe(() => setStore(closeI18n(i18n)));
+  const [store, setStore] = createStore(cloneI18n(i18n));
+  subscribe(() => setStore(cloneI18n(i18n)));
 
   return store;
 }
