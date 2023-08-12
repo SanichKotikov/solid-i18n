@@ -29,11 +29,13 @@ function App() {
   return (
     <I18nProvider i18n={i18n}>
       <Text
-        message="Read the <link>documentation</link> for more info."
-        link={(text) => <a href="https://github.com/SanichKotikov/solid-i18n">{text}</a>}
+        message='Read the <link>documentation</link> for more info.'
+        link={(text) => (
+          <a href='https://github.com/SanichKotikov/solid-i18n'>{text}</a>
+        )}
       />
     </I18nProvider>
-  )
+  );
 }
 ```
 
@@ -41,7 +43,7 @@ function App() {
 
 ```typescript jsx
 <Text
-  message="{count, plural, =0 {No items} one {One item} other {{count} items}}."
+  message='{count, plural, =0 {No items} one {One item} other {{count} items}}.'
   count={19999}
 />
 ```
@@ -68,11 +70,7 @@ Note: use `{datetime, date}` for number or string values.
 ### Number Formatting
 
 ```typescript jsx
-<Numeric
-  value={9.99}
-  numberStyle="currency"
-  currency="EUR"
-/>
+<Numeric value={9.99} numberStyle='currency' currency='EUR' />
 ```
 
 ### useI18n
@@ -86,8 +84,15 @@ function SomeComp() {
   return (
     <div>
       <h1>{i18n.t('Page title')}</h1>
-      <div>{i18n.formatNumber(99999.9, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
-      <div>{i18n.formatDateTime(new Date(), { day: '2-digit', month: 'short' })}</div>
+      <div>
+        {i18n.formatNumber(99999.9, {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        })}
+      </div>
+      <div>
+        {i18n.formatDateTime(new Date(), { day: '2-digit', month: 'short' })}
+      </div>
     </div>
   );
 }
@@ -131,12 +136,9 @@ const i18n = createI18n({
 function App() {
   return (
     <I18nProvider i18n={i18n}>
-      <Text
-        message="Some value: {count, number, fraction}"
-        count={999}
-      />
+      <Text message='Some value: {count, number, fraction}' count={999} />
     </I18nProvider>
-  )
+  );
 }
 ```
 

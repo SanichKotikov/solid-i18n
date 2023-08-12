@@ -28,7 +28,9 @@ function cloneI18n(i18n: Readonly<I18n>): Readonly<I18n> {
   };
 }
 
-export function createI18n(options: Omit<I18nOptions, 'formatTag'>): Readonly<I18n> {
+export function createI18n(
+  options: Omit<I18nOptions, 'formatTag'>
+): Readonly<I18n> {
   const { i18n, subscribe } = create({ ...options, formatTag });
 
   const [store, setStore] = createStore(cloneI18n(i18n));

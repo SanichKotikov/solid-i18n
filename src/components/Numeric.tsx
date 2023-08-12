@@ -12,8 +12,12 @@ export interface NumericProps extends Omit<NumberOptions, 'style'> {
 
 export function Numeric(props: Readonly<NumericProps>) {
   const i18n = useI18n();
-
-  const [local, other] = splitProps(props, ['value', 'preset', 'numberStyle', 'class']);
+  const [local, other] = splitProps(props, [
+    'value',
+    'preset',
+    'numberStyle',
+    'class',
+  ]);
   const options = mergeProps(other, { style: local.numberStyle });
   const numberPreset = i18n.presets.number?.[local.preset ?? 'default'];
 
