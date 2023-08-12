@@ -12,12 +12,14 @@ export interface DateTimeProps extends DateTimeOptions {
 export function DateTime(props: Readonly<DateTimeProps>) {
   const i18n = useI18n();
   const [local, others] = splitProps(props, ['date', 'preset', 'class']);
+  const dateTimePreset = i18n.presets.dateTime?.[local.preset ?? 'default'];
 
   return (
     <span class={local.class}>
-      {i18n.formatDateTime(local.date, !isEmpty(others)
-        ? others
-        : i18n.presets.dateTime?.[local.preset || 'default'])}
+      {i18n.formatDateTime(
+        local.date,
+        isEmpty(others) ? dateTimePreset : others
+      )}
     </span>
   );
 }

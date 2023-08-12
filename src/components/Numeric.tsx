@@ -15,12 +15,14 @@ export function Numeric(props: Readonly<NumericProps>) {
 
   const [local, other] = splitProps(props, ['value', 'preset', 'numberStyle', 'class']);
   const options = mergeProps(other, { style: local.numberStyle });
+  const numberPreset = i18n.presets.number?.[local.preset ?? 'default'];
 
   return (
     <span class={local.class}>
-      {i18n.formatNumber(local.value, !isEmpty(options)
-        ? options
-        : i18n.presets.number?.[local.preset || 'default'])}
+      {i18n.formatNumber(
+        local.value,
+        isEmpty(options) ? numberPreset : options
+      )}
     </span>
   );
 }
