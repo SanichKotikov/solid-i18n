@@ -15,9 +15,10 @@ export function DateTime(props: Readonly<DateTimeProps>) {
 
   return (
     <span class={local.class}>
-      {i18n.formatDateTime(local.date, !isEmpty(others)
-        ? others
-        : i18n.presets.dateTime?.[local.preset || 'default'])}
+      {i18n.formatDateTime(
+        local.date,
+        !isEmpty(others) ? others : i18n.presets.dateTime?.[local.preset || 'default'],
+      )}
     </span>
   );
 }

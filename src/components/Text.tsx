@@ -2,7 +2,7 @@ import { splitProps } from 'solid-js';
 import type { I18nMessage, I18nValues } from 'i18n-mini/lib/types';
 import { useI18n } from '../context';
 
-export type TextProps = I18nMessage & I18nValues & { class?: string; };
+export type TextProps = I18nMessage & I18nValues & { class?: string };
 
 export function Text(props: Readonly<TextProps>) {
   const i18n = useI18n();

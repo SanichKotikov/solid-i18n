@@ -18,9 +18,10 @@ export function Numeric(props: Readonly<NumericProps>) {
 
   return (
     <span class={local.class}>
-      {i18n.formatNumber(local.value, !isEmpty(options)
-        ? options
-        : i18n.presets.number?.[local.preset || 'default'])}
+      {i18n.formatNumber(
+        local.value,
+        !isEmpty(options) ? options : i18n.presets.number?.[local.preset || 'default'],
+      )}
     </span>
   );
 }

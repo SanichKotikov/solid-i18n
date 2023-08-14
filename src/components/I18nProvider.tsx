@@ -9,9 +9,5 @@ interface Props {
 }
 
 export function I18nProvider(props: Readonly<Props>) {
-  return (
-    <I18nContext.Provider value={props.i18n}>
-      {props.children}
-    </I18nContext.Provider>
-  );
+  return <I18nContext.Provider value={props.i18n}>{props.children}</I18nContext.Provider>;
 }
