@@ -19,8 +19,8 @@ export type { DateTimeProps } from './components/DateTime';
 export type { I18n } from './types';
 
 function formatTag(tag: string, child: string | string[] | undefined) {
-  const el = template(`<${tag}>`, 0);
-  insert(el, () => child);
+  const el = template(`<${tag}>`);
+  insert(el(), () => child);
   return el;
 }
 
