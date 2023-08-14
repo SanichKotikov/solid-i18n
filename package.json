@@ -7,7 +7,11 @@
   "sideEffects": false,
   "scripts": {
     "start": "tsc && babel src --out-dir lib --extensions '.ts,.tsx' --watch",
-    "build": "tsc && babel src --out-dir lib --extensions '.ts,.tsx'"
+    "build": "tsc && babel src --out-dir lib --extensions '.ts,.tsx'",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   },
   "repository": {
     "type": "git",
@@ -47,6 +51,9 @@
     "@babel/preset-env": "7.22.10",
     "@babel/preset-typescript": "7.22.5",
     "babel-preset-solid": "1.x.x",
+    "husky": "8.0.3",
+    "lint-staged": "14.0.0",
+    "prettier": "3.0.1",
     "typescript": "5.1.6"
   }
 }
