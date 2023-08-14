@@ -148,3 +148,7 @@ function App() {
 ## Extracting messages
 
 Use [react-i18n-mini-parser](https://www.npmjs.com/package/react-i18n-mini-parser) for extracting default messages.
+
+## Contributing
+
+Please read [this documentation](https://github.com/SanichKotikov/contributing) before contributing.
