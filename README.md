@@ -18,7 +18,7 @@ use [polyfills](https://formatjs.io/docs/polyfills) for some outdated browsers.
 npm i solid-i18n
 ```
 
-#### Displaying Messages
+### Displaying Messages
 
 ```typescript jsx
 import { createI18n, I18nProvider, Text } from 'solid-i18n';
@@ -37,7 +37,7 @@ function App() {
 }
 ```
 
-#### Plural Formatting
+### Plural Formatting
 
 ```typescript jsx
 <Text
@@ -46,7 +46,7 @@ function App() {
 />
 ```
 
-#### Date Formatting
+### Date Formatting
 
 ```typescript jsx
 <Text
@@ -65,7 +65,7 @@ function App() {
 
 Note: use `{datetime, date}` for number or string values.
 
-#### Number Formatting
+### Number Formatting
 
 ```typescript jsx
 <Numeric
@@ -75,7 +75,7 @@ Note: use `{datetime, date}` for number or string values.
 />
 ```
 
-#### useI18n
+### useI18n
 
 ```typescript jsx
 import { useI18n } from 'solid-i18n';
@@ -93,7 +93,7 @@ function SomeComp() {
 }
 ```
 
-#### Define Messages
+### Define Messages
 
 ```typescript jsx
 import { useI18n, defineMessages } from 'solid-i18n';
@@ -108,7 +108,7 @@ function SomeComp() {
 }
 ```
 
-#### Using Presets
+### Using Presets
 
 ```typescript jsx
 import { createI18n, I18nProvider, Text } from 'solid-i18n';
