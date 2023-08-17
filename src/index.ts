@@ -12,7 +12,6 @@ export type { I18nPresets } from 'i18n-mini';
 export * from './components';
 export { useI18n } from './context';
 
-
 function formatTag(tag: string, child: string | string[] | undefined) {
   const el = template(`<${tag}>`);
   insert(el(), () => child);
